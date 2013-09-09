@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteRule ^n/(.+)$ notes.php?add=$1 [QSA]
+#RewriteRule ^n/?([A-Za-z0-9­]+)/?$ notes.php?add=$1 [QSA]
+#RewriteRule ^n/?$ [R=301,L]
+#RewriteRule ^n/?([A-Za-z0-9\s]+)/?$ notes.php?add=$1 [QSA]
+RewriteRule ^n/?$ ./ [R=301,L]
