@@ -95,14 +95,14 @@ echo "<head><title>{$username}'s notes</title><meta charset=\"UTF-8\"></head><bo
 	}
 	elseif (preg_match('/([a-zA-Z]+)>$/', $_GET['add'], $results)) {
 		if(in_array($results[1],$tags)){
-		echo "<center><h1>{$username}'s notes @<u>" . $results[1] . "</u></h1></center>";
+		        echo "<h1 align=\"center\">{$username}'s notes @<u>" . $results[1] . "</u></h1>";
 			$data = file_get_contents($results[1] . ".txt");
 			$data = str_replace("\n", "</p>\n<p>", '<p>'.$data.'</p>');
 			echo $data;
 		}
 		elseif($strict != 1)
 		{
-			echo "<center><h1>{$username} notes @<u>" . $results[1] . "</u></h1></center>";
+			echo "<h1 align=\"center\">{$username} notes @<u>" . $results[1] . "</u></h1>";
 			$data = file_get_contents($results[1] . ".txt");
 			$data = str_replace("\n", "</p>\n<p>", '<p>'.$data.'</p>');
 			echo $data;
