@@ -95,14 +95,14 @@ echo "<head><title>{$username}'s notes</title><meta charset=\"UTF-8\"></head><bo
 	}
 	elseif (preg_match('/([a-zA-Z]+)>$/', $_GET['add'], $results)) {
 		if(in_array($results[1],$tags)){
-		        echo "<h1 align=\"center\">{$username}'s notes @<u>" . $results[1] . "</u></h1>";
+		        echo "<h1 style=\"text-align: center;\">{$username}'s notes @<u>" . $results[1] . "</u></h1>";
 			$data = file_get_contents($results[1] . ".txt");
 			$data = str_replace("\n", "</p>\n<p>", '<p>'.$data.'</p>');
 			echo $data;
 		}
 		elseif($strict != 1)
 		{
-			echo "<h1 align=\"center\">{$username} notes @<u>" . $results[1] . "</u></h1>";
+			echo "<h1 style=\"text-align: center;\">{$username} notes @<u>" . $results[1] . "</u></h1>";
 			$data = file_get_contents($results[1] . ".txt");
 			$data = str_replace("\n", "</p>\n<p>", '<p>'.$data.'</p>');
 			echo $data;
@@ -114,11 +114,10 @@ echo "<head><title>{$username}'s notes</title><meta charset=\"UTF-8\"></head><bo
 	}
 	echo "TAGS:<br/>";
 	foreach ($tags as $key => $value) {
-	echo "<a href=\"notes.php?add=$value>\">{$value}</a><br/>";
+	        echo "<a href=\"notes.php?add=$value>\">{$value}</a><br/>";
 	}
 ?>
-<div align="center" ><p>End of line.</p></div>
-<div align="center" ><p>©2013 Alfredo Consebola </p></div>
+<div style="text-align: center;" ><p>End of line.</p></div>
+<div style="text-align: center;"><p>©2013 Alfredo Consebola </p></div>
 </body>
 </html>
-
