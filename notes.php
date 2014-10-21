@@ -35,13 +35,12 @@ $strict = 0; // strict is 1
 	src: url("./fonts/Museo300-Regular.otf") format("opentype");
 }
 
-body{
-	color: #666;
-	font-family: Calibri, sans-serif;
-	text-shadow: 0px 1px 0px #ccc;
+body {
+color: #666;
+font-family: Calibri, sans-serif;
+text-shadow: 0px 1px 0px #ccc;
 }
-h1
-{
+h1 {
 font-family: "Museo";
 color: white; 
 text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
@@ -52,17 +51,16 @@ font-family:Museo, sans-serif;
 text-shadow: 0 0 10px #00ff00,
              0 0 20px #00ff00,
              0 0 30px #00ff00,
-              0 0 40px #00ff00,
-              0 0 70px #00ff00,
-              0 0 80px #00ff00,
+             0 0 40px #00ff00,
+             0 0 70px #00ff00,
+             0 0 80px #00ff00,
              0 0 100px #00ff00,
              0 0 150px #00ff00;
 color: black;
 }
-body{ background-color: #000000;}
-
-
-
+body { 
+background-color: #000000;
+}
 </style>
 <?php
 
@@ -114,7 +112,7 @@ echo "<head><title>{$username}'s notes</title><meta charset=\"UTF-8\"></head><bo
 	}
 	echo "TAGS:<br/>";
 	foreach ($tags as $key => $value) {
-	        echo "<a href=\"notes.php?add=$value>\">{$value}</a><br/>";
+		echo "<a href=\"notes.php?add=$value>\">{$value}</a><br/>";
 	}
 ?>
 <div style="text-align: center;" ><p>End of line.</p></div>
