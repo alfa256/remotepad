@@ -66,7 +66,7 @@ body{ background-color: #000000;}
 </style>
 <?php
 
-echo "<head><title>{$username}'s notes</title><meta charset=\"UTF-8\"><head><body>";
+echo "<head><title>{$username}'s notes</title><meta charset=\"UTF-8\"></head><body>";
 	if( preg_match('/([a-zA-Z]+)<(.+)/', $_GET['add'], $results))
 	{
 		
